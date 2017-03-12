@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Print Order</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Your info:</h2>
+	    <p>
+		    Fullfill your informations
+	    </p>
+	    <p>
+		    
+	    </p>
+    </div>
+    <div class="col-md-6">
+        <h2>Upload file to print:</h2>
+	    <p>
+		    <input type="file" value="Select file to print"/>
+	    </p>
+	    <p>
+		    @if (Request.IsAuthenticated)
+		    {
+		    <input type="submit" value="Print"/>
+			    
+		    }
+		    else
+		    {
+			    <p>
+				    Please login to print file
+			    </p>
+		    }
+	    </p>
+    </div>
+    
+</div>
